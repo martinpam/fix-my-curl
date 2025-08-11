@@ -35,5 +35,5 @@ MIT © psquared GmbH
 
 ## Links
 
-- Live: https://fix-my-curl.psquared.ai/
+- Live: https://fix-my-curl.com/
 - Repo: https://github.com/martinpam/fix-my-curl
