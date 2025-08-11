@@ -1,0 +1,75 @@
+@import 'tailwindcss';
+
+/* Base resets + page defaults */
+@layer base {
+  html,
+  body,
+  #app {
+    @apply bg-black text-white;
+  }
+  body {
+    margin: 0;
+  }
+}
+
+/* Gentle float for background blobs */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* Component presets to streamline styles */
+@layer components {
+  .page-shell {
+    @apply relative mx-auto w-full max-w-4xl px-4 py-10;
+  }
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-4 sm:p-5;
+  }
+  .section-title {
+    @apply mb-2 flex items-center gap-2 text-sm text-white/70;
+  }
+  .glass-input {
+    @apply mt-1 h-40 w-full resize-y rounded-lg border border-white/10 bg-black/40 p-3 font-mono text-sm text-white/80 placeholder:text-white/40 focus:outline-none;
+  }
+  .code-pre {
+    @apply overflow-x-auto rounded-lg border border-white/10 bg-black/40 p-3 text-sm text-white/80;
+  }
+  .meta-label {
+    @apply flex items-center gap-2 text-white/60 text-[11px] select-none mb-1;
+  }
+
+  /* Footer */
+  .footer-shell {
+    @apply mx-auto w-full max-w-4xl px-4 py-10;
+  }
+  .footer-card {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6;
+  }
+  .footer-grid {
+    @apply grid gap-6 md:grid-cols-2;
+  }
+  .footer-columns {
+    @apply grid grid-cols-2 sm:grid-cols-3 gap-6 text-sm;
+  }
+  .footer-col {
+    @apply space-y-1;
+  }
+  .footer-heading {
+    @apply text-white/60 text-xs uppercase tracking-wider;
+  }
+  .footer-link {
+    @apply block text-white/70 hover:text-white leading-6;
+  }
+  .footer-note {
+    @apply text-sm text-white/60 md:text-right md:self-start;
+  }
+}
