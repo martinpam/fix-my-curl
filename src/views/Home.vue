@@ -31,7 +31,9 @@ const placeholder = `curl -X GET https://api.example.com/search -H Accept: appli
         </div>
         <CopyButton :text="result.fixed" label="Copy curl" />
       </div>
-      <pre class="code-pre min-h-20"><code>{{ result.fixed }}</code></pre>
+      <pre
+        class="code-pre min-h-20 max-w-screen-md overflow-x-auto whitespace-pre hide-scrollbar mx-auto"
+      ><code>{{ result.fixed }}</code></pre>
 
       <div class="mt-3">
         <div class="meta-label" aria-hidden="true">

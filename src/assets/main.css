@@ -73,3 +73,11 @@
     @apply text-sm text-white/60 md:text-right md:self-start;
   }
 }
+
+.hide-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
